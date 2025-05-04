@@ -6,11 +6,13 @@ const db = require("./Db/db");
 const userRoute = require("./routes/user");
 var cookieParser = require('cookie-parser')
 const Trans=require("../backend/routes/trans")
-const authUser=require("../backend/middleware/auth")
+const cors=require("cors")
 app.use(cookieParser())
 dotenv.config({
 
 })
+app.use(cors({
+}))
 
 app.use(express.json()) 
 app.use(express.urlencoded({ extended: true }));
